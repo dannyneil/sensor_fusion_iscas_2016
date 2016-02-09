@@ -47,6 +47,7 @@ if __name__ == '__main__':
     print('Compiled.')
 
     # Run simulation
+    print('Running network...')
     output = run_tester(X_test[:num_digs], Y_test[:num_digs], batch_size, t_end=t_end,
         dt=dt, max_rate=1000, proc_fn=get_output, reset_fn = final_dense.reset_recursively)
 
@@ -63,4 +64,3 @@ if __name__ == '__main__':
     plt.imshow(output, interpolation='nearest', aspect='auto')
     plt.colorbar()
     plt.show()
-    import pdb; pdb.set_trace()
